@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+        <meta charset="UTF-8">
+    	<title>TETRIS</title>    
+		<link type="image/png" rel="shortcut icon" href="image/favicon3.ico" type="image/x-icon">
+		<link type="" rel="shortcut icon" href="image/favicon3.ico" type="image/x-icon">
+		<link type="text/css" rel="stylesheet" href="css/Tetris_font.css"></link>
+    	<script type="text/javascript" src="js/Snow_falling.js"></script>
+    	<script type="text/javascript" src="js/Tetris.js"></script>
+		<style> 
+			body {
+			    background-color: #808080;
+			    text-align: center;
+			    height:100%;
+			}
+			
+			/* 게임화면_결과 확인 창 */
+			#messageBox{
+			    position:absolute;
+			    left: 40%;
+			    top:200px;
+			}
+			/* 게임화면_게임화면테이블(1) */
+			#gametable td{
+		        font-size: 1px;
+		        width: 20px;
+		        height: 20px;
+		        border-width: 1px;
+		        border-style: solid;
+		        border-color: #737373;
+			}
+			/* 게임화면_게임화면테이블(2) */
+			#gametable {
+			    border-width: 0px;
+			    border-collapse: collapse;
+			}
+			/* 게임화면_오른쪽 상단 박스 테두리*/
+			#nextblocktable0 {
+			    border-style: solid;
+			    border-color: #F15F5F;
+			    border-collapse: collapse;
+			}
+			/* 게임화면_왼쪽 상단 박스 테두리*/
+			#storeblocktable{
+			    border-style: solid;
+			    border-color:black;
+			    border-collapse: collapse;
+			}
+			/* 시작화면_선택 박스 크기 및 배경*/
+			#settingTable{
+			    table-layout:fixed;
+			    width:500px;
+			    background-color: #808080;
+			    color:black;
+			    border-style: solid;
+			    border-collapse: collapse;
+			}
+			/* 시작화면_선택 박스 선택시 글씨*/
+			#settingSelect{
+			    font-size: 20px;
+			    font-weight:bold;
+			    color:white;
+			}
+		    /* 게임화면_왼쪽 상단 박스 HOLD 카운트 */
+			#conuntstoring{
+			    font-size: 15px;
+			    font-weight:bold;
+			    color:black;
+			    height: 80px;
+			}
+			/* 게임화면_왼쪽 상단 박스 */
+			.subtablecell{
+		        font-size: 1px;
+		        width: 15px;
+		        height: 15px;
+		        border-width: 0px;
+		        background-color: #eee;
+			}
+			/* 게임화면_오른쪽 상단 박스 */
+			.subnextblock{
+			    border-style: solid;
+			    border-color:black;
+			    border-collapse: collapse;
+			}
+			/* 시작화면_선택 박스 */
+			.settingcell{
+			    width: 50px;
+			    height: 50px;
+			    border-style: solid;
+			    border-color: #808080;
+			    border-collapse: collapse;
+			}
+			.Line {
+			    font-size: 50px;
+			}
+			t{
+				color:white;
+			}
+		</style>
+	</HEAD>
+ 
+	<BODY onload=setting();>
+		<t2>참고 - https://bperhaps.tistory.com</t2>
+		<br><br><br>
+		<t>T E T R I S</t>
+	    <div id="wrap" style="margin:0 auto; width:800px">
+            <div id="state" style="float:left; margin:0 auto; width:200px"><br>
+                <div id="storeblockdisplay" style="margin:0 auto; width:90px"></div>
+                <div id="conuntstoring"></div>
+                <div id='isghostmode'></div>
+            </div>
+            <br>
+            <div id="tableForgame" style="float:left; width:350px"></div>
+            <div id="nextBlock" style="float:left; width:90px "></div>
+           
+            <div id="information" style="float:left; width:120px">
+                <div id="lineOrPoint" style="float:left; font-size:0px;"></div>
+                
+                <div id="time" style="text-align: center;">
+                    <table style="table-layout:fixed; width:120px; margin:0 auto">    
+	                    <tr id='timername'>
+	                        <td id='mt' style="width:40px"></td>
+	                        <td id='st' style="width:40px"></td>
+	                        <td id='mst' style="width:40px"></td>
+	                    </tr>
+	                    <tr id='timedata'>
+	                        <td id='m' style="width:40px"></td>
+	                        <td id='s' style="width:40px"></td>
+	                        <td id='ms' style="width:40px"></td>
+	                    </tr>
+                    </table>
+                </div>
+            </div>
+	    </div>
+	    <div id=select style="margin:0 auto; width:500px"></div>
+	    <br><br>
+		<div style="margin:0 auto; width:500px">
+			<t2>--- CONTROL ---<br>SHIFT : HOLD<br>G : GHOST MODE</t2>
+		</div>
+	</BODY>
+</HTML>

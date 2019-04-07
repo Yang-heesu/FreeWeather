@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'HS봄바람체';
+	src: url(font/HS봄바람체1.0.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: '나눔바른고딕OTF UltraLight';
+	src: url(font/NanumBarunGothicUltraLight.ttf) format('opentype');
+}
+
+t{
+    font-size : 60pt;
+	font-family: HS봄바람체;
+}
+
+t2{
+    font-size : 8pt;
+    color : #D8D8D8;
+	font-family: 나눔바른고딕OTF UltraLight;
+}

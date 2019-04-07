@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'lillybelle';
+	src: url(font/lillybelle.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: '서울한강 장체L';
+	src: url(font/서울한강 장체L.ttf) format('truetype');
+}
+
+tt{
+    font-size : 60pt;
+    color : white;
+	font-family: lillybelle;
+}
+
+t1{
+    font-size : 15pt;
+    color : black;
+	font-family: 서울한강 장체L;
+}
